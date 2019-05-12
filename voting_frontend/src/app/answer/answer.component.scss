@@ -1,0 +1,21 @@
+:host {
+  padding: 5px 0px 5px 0px;
+}
+
+button {
+  width: 100%;
+  height: 40vh;
+  border: none;
+  color: white;
+  font-size: 10vh;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button:hover {
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

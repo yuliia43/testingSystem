@@ -1,0 +1,27 @@
+# compiled output
+**/dist
+**/tmp
+**/out-tsc
+
+**/target
+**/.mvn
+*.war
+
+# dependencies
+**/node
+**/node_modules
+
+# System Files
+.DS_Store
+Thumbs.db
+package-lock.json
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Log
+*.log
+**/logs
