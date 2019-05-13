@@ -4,6 +4,7 @@ import {interval, Unsubscribable} from 'rxjs';
 import {QuestionService} from './services/question.service';
 import {HttpClient} from '@angular/common/http';
 import {ToasterService} from 'angular2-toaster';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +19,13 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private userService: UserService,
               private questionService: QuestionService,
               private httpClient: HttpClient,
-              private toaster: ToasterService) {
+              private toaster: ToasterService,
+              // ОН ДОБАВИЛ РОУТЕР!!!!!!!!!!!!!!!
+              private router: Router) {
   }
 
   ngOnInit(): void {
+    document.body.classList.add('bg-img');
     this.userService.initUser();
     this.intervalSubscription = interval(1000).subscribe(() => this.questionService.getLastQuestion());
   }
@@ -35,6 +39,11 @@ export class AppComponent implements OnInit, OnDestroy {
     if (this.intervalSubscription) {
       this.intervalSubscription.unsubscribe();
     }
+  }
+
+  // МЕТОД НАВИГАЦИИ
+  onNavigate(url: string): void {
+    this.router.navigateByUrl(url);
   }
 
 }

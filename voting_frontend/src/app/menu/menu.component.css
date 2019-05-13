@@ -1,0 +1,26 @@
+
+.top-menu {
+  position: relative;
+  padding: 10px 15px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+}
+.sub-menu{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  color:#052831;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  background-color:#C3E1E9;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}

@@ -1,0 +1,26 @@
+<div style="text-align:center">
+  <h2>Create a test</h2>
+  <div class="field">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name of test:</mat-label>
+        <input matInput placeholder="Name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>This field is required!</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Description of test:</mat-label>
+        <input matInput placeholder="Description">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>This field is required!</mat-hint>
+      </mat-form-field>
+    </p>
+
+  </div>
+  <div class="example-button-row">
+    <br><button  ng-click='clearCompleted()' mat-stroked-button [routerLink]="['create-task']">Next</button>
+</div>
+  <router-outlet></router-outlet>
+</div>

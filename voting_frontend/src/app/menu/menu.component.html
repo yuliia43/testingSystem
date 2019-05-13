@@ -1,0 +1,14 @@
+<div style="text-align:center">
+
+<button  class="top-menu" mat-button [matMenuTriggerFor] = "menu">Testing</button>
+<mat-menu #menu = "matMenu">
+  <button class="submenu" mat-menu-item>Create a test</button>
+  <button class="submenu" mat-menu-item >Pass a test</button>
+</mat-menu>
+<button class="top-menu" mat-button [matMenuTriggerFor] = "menu1">Personal page</button>
+<mat-menu #menu1 = "matMenu">
+  <button class="submenu" mat-menu-item>Entrance</button>
+  <button class="submenu" mat-menu-item>Registration</button>
+  <button class="submenu" mat-menu-item>Output</button>
+</mat-menu><br>
+</div>

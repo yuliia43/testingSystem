@@ -1,0 +1,35 @@
+.field{
+
+  font: 20px/1.5 Helvetica, Arial, serif;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+  color: #052831;
+  background-color: #C3E1E9;;
+}
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+.example-button-row button,
+.example-button-row a {
+  font-family: 'Kaushan Script', cursive;
+  margin-bottom: 7px;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  color:#052831;
+  background-color:#C3E1E9;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}

@@ -1,0 +1,48 @@
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+mat-list-item {
+  font: 20px/1.5 Helvetica, Arial, serif;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+
+  color: #052831;
+
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+
+}
+mat-list{
+  width: 420px;
+  align: center;
+  background-color: #C3E1E9;
+  margin:auto;
+  border-radius: 20px;
+}
+table {
+  width: 50%;
+  margin: auto;
+}
+th{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+td{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 0.7em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}

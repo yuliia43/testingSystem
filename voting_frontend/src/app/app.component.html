@@ -1,12 +1,41 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
-  <h1>
-    Welcome to {{title}}.
-  </h1>
+
+  <div class="one" ><h1  style="color:White">APPLICATION</h1></div>
+  <button  class="top-menu" mat-button [matMenuTriggerFor] = "menu">Testing</button>
+  <mat-menu #menu = "matMenu">
+    <!--ПЕРВЫЙ СПОСОБ ЧЕРЕЗ ts-->
+    <button class="submenu" mat-menu-item [routerLink]="['create-test']">Create a test</button>
+    <!--ВТОРОЙ СПОСОБ ЧЕРЕЗ HTML-->
+    <button class="submenu" mat-menu-item  [routerLink]="['table']">Pass a test</button>
+  </mat-menu>
+
+  <button class="top-menu" mat-button  [matMenuTriggerFor] = "menu1" >Personal page</button>
+  <mat-menu #menu1 = "matMenu">
+    <button class="submenu" mat-menu-item [routerLink]="['user-page']">Page</button>
+    <button class="submenu" mat-menu-item [routerLink]="['entrance']">Entrance</button>
+    <button class="submenu" mat-menu-item  [routerLink]="['reg-form']">Registration</button>
+  </mat-menu>
+
 </div>
-<div style="text-align:center">
-  <input #message>
-  <button (click)="sendMessage(message.value)">Send Message</button>
-  <app-question></app-question>
-  <toaster-container></toaster-container>
+<router-outlet></router-outlet>
+  <!--<button class="top-menu" mat-button [matMenuTriggerFor] = "menu1">Personal page</button>
+  <mat-menu #menu1 = "matMenu">
+    <button class="submenu" mat-menu-item>Entrance</button>
+    <button class="submenu" mat-menu-item>Registration</button>
+    <button class="submenu" mat-menu-item>Output</button>
+  </mat-menu><br>
+  <h2>Passing a test</h2>
+  <app-test-box></app-test-box>
+  <div class="example-button-row">
+    <button mat-stroked-button>Next</button>
+    <button mat-stroked-button>Finish</button>
+  </div>
+    <h2>Table of tests</h2>
+  <app-table></app-table>
+  <h2>Registration</h2>
+<app-reg-form></app-reg-form>
 </div>
+
+<router-outlet></router-outlet>-->
