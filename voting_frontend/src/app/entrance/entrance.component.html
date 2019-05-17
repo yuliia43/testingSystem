@@ -1,26 +1,29 @@
 <div style="text-align:center">
   <h2>Entrance</h2>
-  <div class="field">
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter login:</mat-label>
-        <input matInput placeholder="Login">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
+  <mat-card class="field">
+    <mat-card-content>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter login:</mat-label>
+          <input #login matInput placeholder="Login">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>This field is required!</mat-hint>
+        </mat-form-field>
+      </p>
 
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter password:</mat-label>
-        <input matInput placeholder="Password">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter password:</mat-label>
+          <input type="password" #password matInput placeholder="Password">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>This field is required!</mat-hint>
+        </mat-form-field>
+      </p>
 
-  </div>
+    </mat-card-content>
+
+  </mat-card>
   <div class="example-button-row">
-    <button mat-stroked-button>Entrance</button>
+    <button (click)="enter(login.value, password.value); login.value = ''; password.value = '';" mat-stroked-button>Entrance</button>
   </div>
 </div>

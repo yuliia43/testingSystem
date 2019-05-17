@@ -1,10 +1,11 @@
 <div style="text-align:center">
   <h2>Create a task</h2>
-  <div class="field">
+  <mat-card class="field">
+    <mat-card-content>
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Task:</mat-label>
-        <input matInput placeholder="Task">
+        <input #question matInput placeholder="Task">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -13,7 +14,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>a):</mat-label>
-        <input matInput placeholder="a">
+        <input #answer1 matInput placeholder="a">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -21,7 +22,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>b):</mat-label>
-        <input matInput placeholder="b">
+        <input #answer2 matInput placeholder="b">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -29,7 +30,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>c):</mat-label>
-        <input matInput placeholder="c">
+        <input #answer3 matInput placeholder="c">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -37,7 +38,7 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>d):</mat-label>
-        <input matInput placeholder="d">
+        <input #answer4 matInput placeholder="d">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -45,14 +46,15 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>True answer:</mat-label>
-        <input matInput placeholder="True answer">
+        <input #rightanswer matInput placeholder="True answer">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Please,enter only letter!</mat-hint>
       </mat-form-field>
     </p>
-  </div>
+    </mat-card-content>
+  </mat-card>
   <div class="example-button-row">
-    <br><button  ng-click='clearCompleted()' mat-stroked-button >Next</button>
-    <br><button  ng-click='clearCompleted()' mat-stroked-button >Create test</button>
+    <br><button (click)="addQuestion(question.value,answer1.value,answer2.value,answer3.value,answer4.value,rightanswer.value);question.value='';answer1.value='';answer2.value='';answer3.value='';answer4.value='';rightanswer.value=''; " mat-stroked-button >Add question</button>
+    <br><button (click)="finish()" mat-stroked-button >Finish</button>
   </div>
 </div>

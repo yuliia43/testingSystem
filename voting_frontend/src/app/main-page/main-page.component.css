@@ -1,0 +1,89 @@
+.example-button-row button,
+.example-button-row a {
+  font-family: 'Kaushan Script', cursive;
+  margin-bottom: 7px;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  color:#052831;
+  background-color:#C3E1E9;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}
+.one {
+  padding: 50px 20px;
+  text-align: center;
+}
+h1 {
+  text-shadow: 3px 5px 6px #242727;
+  opacity: 1.0;
+  filter: alpha(Opacity=100);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+.one h1 {
+  font-family: 'Righteous', cursive;
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 4em;
+  padding: 11px 60px;
+  margin: 0;
+  line-height: 1;
+}
+.one h1:before, .one h1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #EDF0F8 2px,  #EDF0F8 4px);
+}
+.one h1:before {left: 0;}
+.one h1:after {right: 0;}
+@media (max-width: 420px) {
+  .one h1 {font-size: 2em;}
+}
+mat-card{
+  font: 22px/1.5 Helvetica, Arial, serif;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+  color: #052831;
+  background-color: #C3E1E9;
+  width:700px;
+  height:200px;
+  border-radius: 20px;
+  margin:auto;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}
+mat-list{
+  font: 20px/1.5 Helvetica, Arial, serif;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+
+  color: #052831;
+
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 620px;
+  align: center;
+  background-color: #C3E1E9;
+  margin:auto;
+  border-radius: 20px;
+}
+mat-icon{
+  color:floralwhite;
+}

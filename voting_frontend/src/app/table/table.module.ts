@@ -3,11 +3,11 @@ import {RouterModule, Routes} from '@angular/router';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TableComponent } from './table.component';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatMenuModule,
+  MatMenuModule, MatRadioModule,
   MatTableModule
 } from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
@@ -17,14 +17,9 @@ import {ToasterModule, ToasterService} from 'angular2-toaster';
 import {TestBoxComponent} from '../test-box/test-box.component';
 import {ResultComponent} from '../result/result.component';
 
-const tableRoutes: Routes = [
-  { path: 'test-box', component: TestBoxComponent, children: [{path: 'result', component: ResultComponent}] }
-  ];
 @NgModule({
   declarations: [
-    TableComponent,
-    TestBoxComponent,
-    ResultComponent
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -34,14 +29,15 @@ const tableRoutes: Routes = [
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(tableRoutes),
     MatTableModule,
     MatTableModule,
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatRadioModule
   ],
   providers: [ToasterService],
   bootstrap: [TableComponent]

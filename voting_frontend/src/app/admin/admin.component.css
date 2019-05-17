@@ -1,0 +1,146 @@
+.one {
+  padding: 50px 20px;
+  text-align: center;
+}
+h1 {
+  text-shadow: 3px 5px 6px #242727;
+  opacity: 1.0;
+  filter: alpha(Opacity=100);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+.one h1 {
+  font-family: 'Righteous', cursive;
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 4em;
+  padding: 11px 60px;
+  margin: 0;
+  line-height: 1;
+}
+.one h1:before, .one h1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #EDF0F8 2px,  #EDF0F8 4px);
+}
+.one h1:before {left: 0;}
+.one h1:after {right: 0;}
+@media (max-width: 420px) {
+  .one h1 {font-size: 2em;}
+}
+.top-menu {
+  position: relative;
+  padding: 10px 15px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+}
+.sub-menu{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  color:#052831;
+}
+.example-button-row button,
+.example-button-row a {
+  font-family: 'Kaushan Script', cursive;
+  margin-bottom: 7px;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  color:#052831;
+  background-color:#C3E1E9;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}
+
+.submenu1{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('http://i42.beon.ru/63/71/2057163/78/90582478/tumblr_lv490jvnvs1r6me19o1_400_large.gif');
+  height: 160px;
+  width: 250px;
+}
+.submenu2{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('https://image.freepik.com/free-vector/_27722-178.jpg');
+  height: 160px;
+  width: 250px;
+}
+.submenu3{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('https://i.pinimg.com/originals/a0/a4/c9/a0a4c944536cb74ed3243af771edf951.png');
+  height: 160px;
+  width: 250px;
+}
+.submenu4{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('https://hookagency.com/wp-content/uploads/2015/11/miracle-grow-light-green-gradient.jpg');
+  height: 160px;
+  width: 250px;
+}
+.submenu5{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('https://images.clipartlogo.com/files/istock/previews/1031/103150483-starry-sky-seamless-pattern-child.jpg');
+  height: 160px;
+  width: 250px;
+}
+.submenu6{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('https://previews.123rf.com/images/zzorik/zzorik1701/zzorik170100092/70377661-plumas-de-p%C3%A1jaro-patr%C3%B3n-de-fondo-de-pantalla-repetido-acuarela.jpg');
+  height: 160px;
+  width: 250px;
+}
+.submenu7{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+  background: url('http://i75.mindmix.ru/85/54/355485/82/6596982/_39.png');
+  height: 160px;
+  width: 250px;
+}

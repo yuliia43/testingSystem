@@ -7,16 +7,16 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToasterModule, ToasterService} from 'angular2-toaster';
 import {CreateTestComponent} from './create-test.component';
-import {CreateTaskComponent} from '../create-task/create-task.component';
+import {CreateQuestionComponent} from '../create-question/create-question.component';
 
-const createtestRoutes: Routes = [
-  { path: 'create-task', component: CreateTaskComponent }
+const testcreatingRoutes: Routes = [
+  { path: 'create-question', component: CreateQuestionComponent }
 ];
 
 @NgModule({
   declarations: [
     CreateTestComponent,
-    CreateTaskComponent
+    CreateQuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,6 @@ const createtestRoutes: Routes = [
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(createtestRoutes),
     MatTableModule,
     MatTableModule,
     MatButtonModule,

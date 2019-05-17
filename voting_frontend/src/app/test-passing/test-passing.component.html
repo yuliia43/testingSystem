@@ -1,0 +1,15 @@
+<div *ngIf="route.children.length === 0">
+  <h2>Do you want to pass this test?</h2>
+  <div class="field">
+    <h3> {{this.model.testName}}</h3>
+    <p class="descr">{{this.model.testDescription}}</p>
+    <p class="creator">Created by {{login}}</p>
+  </div>
+  <div class = "example-button-row">
+    <button mat-stroked-button [routerLink]="['question-passing']">Start!</button>
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+

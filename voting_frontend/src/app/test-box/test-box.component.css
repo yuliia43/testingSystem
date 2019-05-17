@@ -20,6 +20,7 @@ mat-card{
   color: #052831;
   border-radius: 20px;
   margin: auto;
+  margin-bottom: 20px;
 }
 body {
   margin: 0;

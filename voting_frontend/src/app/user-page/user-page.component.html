@@ -1,9 +1,40 @@
-<div style="text-align:center"><h2>User personal page</h2>
+<div *ngIf="route.children.length === 0" style="text-align:center"><h2>User personal page</h2>
 <mat-list>
-  <mat-list-item>User ID:      <label id="field1">ID</label></mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>User Login:   <label id="field2">login</label></mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>User E-mail:  <label id="field3">e-mail</label></mat-list-item>
+  <mat-list-item>User Login:   <label id="field2">{{login}}</label></mat-list-item>
 </mat-list>
+  <div style="text-align:center"><h2>Table of all tests</h2>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="test_name">
+        <th style="text-align: center" mat-header-cell *matHeaderCellDef> Test Name </th>
+        <td style="text-align: center" mat-cell *matCellDef="let element"> {{element.test_name}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container style="text-align: center" matColumnDef="test_description">
+        <th style="text-align: center" mat-header-cell *matHeaderCellDef> Description </th>
+        <td style="text-align: center" mat-cell *matCellDef="let element"> {{element.test_description}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="statistics">
+        <th style="text-align: center" mat-header-cell *matHeaderCellDef> Statistics </th>
+        <td style="text-align: center" mat-cell *matCellDef="let element"><button mat-menu-item (click)="statistics(element.test_id)">See statistics</button></td>
+
+      </ng-container>
+
+
+      <tr style="text-align: center" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr style="text-align: center" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+  </div>
+
+
 </div>
+
+<router-outlet></router-outlet>

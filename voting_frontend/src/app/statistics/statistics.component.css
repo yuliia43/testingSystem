@@ -1,0 +1,36 @@
+table {
+  width:40%;
+  margin: auto;
+}
+th{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+td{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+button{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#052831;
+  padding:40px;
+}

@@ -1,0 +1,26 @@
+<div style="text-align:center">
+  <h2>Leave question for our admins here</h2>
+  <mat-card class="field">
+    <mat-card-content>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your e-mail:</mat-label>
+        <input #email matInput placeholder="Password">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>This field is required!</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Write your quertions here:</mat-label>
+        <textarea #text matInput placeholder="Confirm" rows="5"></textarea>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>This field is required!</mat-hint>
+      </mat-form-field>
+    </p>
+    </mat-card-content>
+  </mat-card>
+  <div class="example-button-row">
+    <button (click)="registerQuestion(email.value, text.value);email.value = ''; text.value = '';" mat-stroked-button>Send</button>
+  </div>
+</div>

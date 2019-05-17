@@ -1,10 +1,11 @@
-<div style="text-align:center">
+<div *ngIf="route.children.length === 0" style="text-align:center">
   <h2>Create a test</h2>
-  <div class="field">
+  <mat-card class="field">
+    <mat-card-content>
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Name of test:</mat-label>
-        <input matInput placeholder="Name">
+      <input #name matInput placeholder="Name">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
@@ -12,15 +13,17 @@
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Description of test:</mat-label>
-        <input matInput placeholder="Description">
+        <input #description matInput placeholder="Description">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>This field is required!</mat-hint>
       </mat-form-field>
     </p>
-
-  </div>
+    </mat-card-content>
+  </mat-card>
   <div class="example-button-row">
-    <br><button  ng-click='clearCompleted()' mat-stroked-button [routerLink]="['create-task']">Next</button>
+    <br><button [routerLink]="['create-question']" (click)="createTest(name.value, description.value); name.value=''; description.value=''" >Create new test</button>
+  </div>
 </div>
+<div>
   <router-outlet></router-outlet>
 </div>

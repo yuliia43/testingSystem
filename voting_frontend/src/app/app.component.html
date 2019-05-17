@@ -1,25 +1,70 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<div style="text-align:center">
-
+<div style="text-align:center; position: fixed;top: 0;left: 0;
+width: 100%;height: 100%;  overflow: auto;" [ngStyle]="getMyStyles()">
+<div *ngIf="router.url.substr(0, 6) !== '/admin'">
   <div class="one" ><h1  style="color:White">APPLICATION</h1></div>
+  <button class="top-menu" mat-button [routerLink]="['main-page']">About</button>
   <button  class="top-menu" mat-button [matMenuTriggerFor] = "menu">Testing</button>
   <mat-menu #menu = "matMenu">
     <!--ПЕРВЫЙ СПОСОБ ЧЕРЕЗ ts-->
-    <button class="submenu" mat-menu-item [routerLink]="['create-test']">Create a test</button>
+    <button class="submenu" mat-menu-item (click)="createTest()">Create a test</button>
     <!--ВТОРОЙ СПОСОБ ЧЕРЕЗ HTML-->
-    <button class="submenu" mat-menu-item  [routerLink]="['table']">Pass a test</button>
+    <button class="submenu" mat-menu-item  (click)="passTest()">Pass a test</button>
   </mat-menu>
-
   <button class="top-menu" mat-button  [matMenuTriggerFor] = "menu1" >Personal page</button>
   <mat-menu #menu1 = "matMenu">
-    <button class="submenu" mat-menu-item [routerLink]="['user-page']">Page</button>
-    <button class="submenu" mat-menu-item [routerLink]="['entrance']">Entrance</button>
-    <button class="submenu" mat-menu-item  [routerLink]="['reg-form']">Registration</button>
+    <button class="submenu" mat-menu-item (click)="userPage()">Page</button>
+    <button class="submenu" mat-menu-item (click)="entrance()">Entrance</button>
+    <button class="submenu" mat-menu-item  (click)="registration()">Registration</button>
+    <button class="submenu" mat-menu-item  (click)="unAuthorise()">Exit</button>
   </mat-menu>
-
+  <button class="top-menu" mat-button [routerLink]="['ask-admin']">Feedback </button>
+  <button class="top-menu" mat-button  [matMenuTriggerFor] = "menu2" >Theme</button>
+  <mat-menu #menu2 = "matMenu">
+    <button class="submenu1" mat-menu-item (click)="setTheme('cloud')">Cloud theme
+      <mat-icon>cloud</mat-icon>
+    </button>
+    <button class="submenu2" mat-menu-item (click)="setTheme('elephants')">Animals theme
+      <mat-icon>pets</mat-icon>
+    </button>
+    <button class="submenu3" mat-menu-item (click)="setTheme('foxes')">Foxes theme
+      <mat-icon>pets</mat-icon>
+    </button>
+    <button class="submenu4" mat-menu-item (click)="setTheme('gradient1')">Gradient theme
+      <mat-icon>brush</mat-icon>
+    </button>
+    <button class="submenu5" mat-menu-item (click)="setTheme('galaxy')">Galaxy theme
+      <mat-icon>brightness_3</mat-icon>
+    </button>
+    <button class="submenu6" mat-menu-item (click)="setTheme('feather')">Feather theme
+      <mat-icon>toys</mat-icon>
+    </button>
+    <button class="submenu7" mat-menu-item (click)="setTheme('owls')">Owls theme
+      <mat-icon>school</mat-icon>
+    </button>
+  </mat-menu>
+  <br><br>
+  <div *ngIf="route.children.length === 0">
+    <app-main-page></app-main-page>
+  </div>
+  <div *ngIf="route.children.length !== 0">
+    <router-outlet></router-outlet>
+  </div>
+<!--  <div class="example-button-row">
+    <button mat-stroked-button [routerLink]="['admin-page-tests']">Admin Tests</button>
+    <button mat-stroked-button [routerLink]="['admin-page-users']">Admin Users</button>
+    &lt;!&ndash;кнопка для того, чтобы админа проверить&ndash;&gt;
+    <button mat-stroked-button [routerLink]="['admin']">Admin</button>
+    &lt;!&ndash;кнопка для того, чтобы таблицу юзера проверить&ndash;&gt;
+    <button mat-stroked-button [routerLink]="['user-page']">User</button>
+  </div>-->
 </div>
-<router-outlet></router-outlet>
+  <div *ngIf="router.url.substr(0, 6) === '/admin'">
+  <router-outlet></router-outlet>
+  </div>
+</div>
+
+
   <!--<button class="top-menu" mat-button [matMenuTriggerFor] = "menu1">Personal page</button>
   <mat-menu #menu1 = "matMenu">
     <button class="submenu" mat-menu-item>Entrance</button>

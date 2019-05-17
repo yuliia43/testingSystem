@@ -25,4 +25,16 @@ export class QuestionService {
     return this.http.post('vote', body);
   }
 
+  addQuestion(question: string, answer1: string, answer2: string, answer3: string, answer4: string, rightAnswer: string, testCreatorId: number) {
+    const formData = new FormData();
+    formData.append('Question', question);
+    formData.append('Answer1', answer1);
+    formData.append('Answer2', answer2);
+    formData.append('Answer3', answer3);
+    formData.append('Answer4', answer4);
+    formData.append('Right_Answer', rightAnswer);
+    formData.append('testCreatorId', String(testCreatorId));
+    this.http.post('http://localhost:8082/questions/createQuestion', formData)
+      .subscribe();
+  }
 }

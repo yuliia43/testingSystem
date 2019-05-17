@@ -1,42 +1,23 @@
-<h2>Passing a test</h2>
-<!--<main>
-  <section class="todo-list" *ngIf="todos.length">
-    <div class="todo-item" *ngFor="let todo of todos" [ngClass]="{'completed': todo.completed}">
-      <button class="checkbox icon" (click)="toggle(todo)">
-        <i  class="material-icons">{{todo.completed ? 'check_box' : 'check_box_outline_blank'}}</i>
-
-      </button>
-      <span class="title">{{ todo.title }}</span>
-
-      <div class="actions">
-
-      </div>
-
-    </div>
-  </section>
-  <div class = "example-button-row">
-  <br><button mat-menu-item>Next</button><br>
-  <button ng-click='clearCompleted()' mat-menu-item [routerLink]="['result']">Finish</button>
-  </div>
-  <router-outlet></router-outlet>
-</main>-->
-<mat-card>
+<div style="text-align:center">
+  <h2>Passing a test</h2>
+<mat-card *ngFor="let element of dataSource">
   <mat-card-content>
-      <p>Test task:<label id="field1">pass a test</label></p>
+      <p>Test task:<label id="field1">{{element.Question}}</label></p>
     <h2 class="example-h2">Variants of answer:</h2><br><br><br>
     <section class="example-section">
       <mat-radio-group [(ngModel)]="labelPosition">
-        <mat-radio-button class="example-margin" value="a">Variant 1</mat-radio-button><br><br>
-        <mat-radio-button class="example-margin" value="b">Variant 2</mat-radio-button><br><br>
-        <mat-radio-button class="example-margin" value="c">Variant 3</mat-radio-button><br><br>
-        <mat-radio-button class="example-margin" value="d">Variant 4</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="a">{{element.Answer1}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="b">{{element.Answer2}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="c">{{element.Answer3}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="d">{{element.Answer4}}</mat-radio-button><br><br>
       </mat-radio-group>
     </section>
   </mat-card-content>
 </mat-card>
 
-<div class = "example-button-row">
-  <br><button mat-stroked-button>Next</button><br>
-  <button ng-click='clearCompleted()' mat-stroked-button [routerLink]="['result']">Finish</button>
+
+  <div class = "example-button-row">
+    <button mat-stroked-button [routerLink]="['result']">Finish</button>
+  </div>
 </div>
 <router-outlet></router-outlet>

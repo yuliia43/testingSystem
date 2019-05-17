@@ -1,7 +1,7 @@
-package testing.domain;
+package com.kpi.voting.domain;
 
-import com.kpi.testing.dao.entity.Test;
-import com.kpi.testing.dao.memoryStore.TestRepository;
+import com.kpi.voting.dao.entity.Test;
+import com.kpi.voting.dao.memoryStore.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,12 +12,13 @@ public class TestService {
     @Autowired
     private TestRepository testRepository;
 
-    public void createTest(String test_name, String test_description, Long test_creator_id){
+    public Long createTest(String test_name, String test_description, Long test_creator_id){
         Test test = new Test();
         test.setTest_name(test_name);
         test.setTest_description(test_description);
         test.setTest_creator_id(test_creator_id);
         testRepository.save(test);
+        return test.getTestId();
     }
 
     public List<Test> getAllTests(){

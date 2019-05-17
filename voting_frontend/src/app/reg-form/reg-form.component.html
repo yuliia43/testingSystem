@@ -1,40 +1,34 @@
 <div style="text-align:center">
   <h2>Registration</h2>
-  <div class="field">
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter login:</mat-label>
-        <input matInput placeholder="Login">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter e-mail:</mat-label>
-        <input matInput placeholder="E-mail">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter password:</mat-label>
-        <input matInput placeholder="Password">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Confirm password:</mat-label>
-        <input matInput placeholder="Confirm">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>This field is required!</mat-hint>
-      </mat-form-field>
-    </p>
-  </div>
+  <mat-card class="field">
+    <mat-card-content>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter login:</mat-label>
+          <input #login matInput placeholder="Login">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>This field is required!</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter password:</mat-label>
+          <input type="password" #password matInput placeholder="Password">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>This field is required!</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm password:</mat-label>
+          <input type="password" #confirm matInput placeholder="Confirm">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>This field is required!</mat-hint>
+        </mat-form-field>
+      </p>
+    </mat-card-content>
+  </mat-card>
   <div class="example-button-row">
-    <button mat-stroked-button>Registration</button>
+    <button (click)="register(login.value, password.value, confirm.value); login.value = ''; password.value = ''; confirm.value = ''; " mat-stroked-button>Registration</button>
   </div>
 </div>

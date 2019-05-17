@@ -1,0 +1,19 @@
+<<div style="text-align:center"><h2>Questions to admin</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th style="text-align: center" mat-header-cell *matHeaderCellDef> E-mail </th>
+      <td style="text-align: center" mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="textQuestion">
+      <th style="text-align: center" mat-header-cell *matHeaderCellDef> Question </th>
+      <td style="text-align: center" mat-cell *matCellDef="let element"> {{element.textQuestion}} </td>
+    </ng-container>
+
+    <tr style="text-align: center" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr style="text-align: center" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

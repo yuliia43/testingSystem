@@ -1,0 +1,29 @@
+<h2 class="testname">{{testPassingComponent.model.testName}}</h2>
+<div *ngIf="finished === 0">
+<mat-card>
+  <mat-card-content>
+    <h3 class="numerator"> Question {{currentQuestion + 1}} of {{numOfQuestions}}</h3>
+    <p>{{questions[currentQuestion].question}}</p>
+    <section >
+      <mat-radio-group >
+        <mat-radio-button class="example-margin" value="a" #ra (change)="CheckRB(ra.value)">{{questions[currentQuestion].answer1}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="b" #rb (change)="CheckRB(rb.value)">{{questions[currentQuestion].answer2}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="c" #rc (change)="CheckRB(rc.value)">{{questions[currentQuestion].answer3}}</mat-radio-button><br><br>
+        <mat-radio-button class="example-margin" value="d" #rd (change)="CheckRB(rd.value)">{{questions[currentQuestion].answer4}}</mat-radio-button><br><br>
+      </mat-radio-group>
+    </section>
+  </mat-card-content>
+</mat-card>
+  <div class = "example-button-row">
+    <button (click)='Next()' mat-stroked-button>Next</button>
+  </div>
+</div>
+
+<div *ngIf="finished === 1">
+  <div class="field">
+    <h2>Your result is {{this.currentScore}}%</h2>
+  </div>
+  <div class = "example-button-row">
+    <button (click)='Exit()' mat-stroked-button>Exit</button>
+  </div>
+</div>

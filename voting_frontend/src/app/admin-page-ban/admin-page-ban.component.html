@@ -1,0 +1,39 @@
+<div style="text-align:center"><h2>Banning users</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="login">
+      <th mat-header-cell *matHeaderCellDef> User Login </th>
+      <td mat-cell *matCellDef="let element"> {{element.login}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Ban </th>
+      <th mat-cell *matCellDef="let element">
+        <div *ngIf="element.banStatus"><button class = "myButton" mat-menu-item (click)="unban(element.login)"> Unban</button></div>
+        <div align="left" *ngIf="!element.banStatus">
+          <mat-form-field>
+            <mat-label>Unban date</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+          <button class = "myButton" mat-menu-item (click)="ban(element.login, picker._selected)">Ban</button>
+        </div>
+      </th>
+
+
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr height = 15px mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+

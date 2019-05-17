@@ -1,0 +1,16 @@
+mat-card{
+  font: 28px/1.5 Helvetica, Arial, serif;
+  font-family: 'Kaushan Script', cursive;
+  font-style: normal;
+  color: #052831;
+  background-color: #C3E1E9;
+  width:500px;
+  height:200px;
+  border-radius: 20px;
+  margin:auto;
+  box-shadow: 0 2px 2px 0 #757575,0 3px 1px -2px #757575,0 1px 5px 0 #757575;
+}
+
+mat-icon{
+  color:floralwhite;
+}

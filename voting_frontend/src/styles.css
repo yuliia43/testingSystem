@@ -2,7 +2,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .bg-img
 {
+  /*
   background-image: url('http://i42.beon.ru/63/71/2057163/78/90582478/tumblr_lv490jvnvs1r6me19o1_400_large.gif');
+  */
   background-position: center;
   background-repeat: repeat;
+}
+body{
+  overflow: auto;
 }
